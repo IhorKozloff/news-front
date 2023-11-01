@@ -1,1 +1,1 @@
-export const baseUrl = 'http://localhost:3001';
+export const baseUrl = 'https://news-backend-r31m.onrender.com';
