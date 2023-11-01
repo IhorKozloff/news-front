@@ -71,7 +71,10 @@ export const CommentsItem = ({id, date, text, user, parentId, img_urls}: IProps)
                 {img_urls.map(item => {
                     return (
                         <li key={item}>
-                            <img src={`${baseUrl}/${item}`} alt="" className="w-auto h-16"/>
+                            <div className='w-32 h-16 hover:border-2 hover:border-solid hover:border-borderImg cursor-pointer'>
+                                <img src={`${baseUrl}/${item}`} alt="" className="w-full h-full object-cover"/>
+                            </div>
+                            
                         </li>
                     );
                 })}

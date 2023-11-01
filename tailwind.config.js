@@ -16,12 +16,13 @@ module.exports = {
             replyBtnBg: '#def1ff',
             footerUp: '#6451cd',
             footerDown: '#151b29',
-            footerPrimary: '#1c2431'
+            footerPrimary: '#1c2431',
+            borderImg: '#cc1f08',
         },
         extend: {
-          spacing: {
-            '18': '72px'
-          },
+            spacing: {
+                '18': '72px'
+            },
         },
     },
     plugins: [],
