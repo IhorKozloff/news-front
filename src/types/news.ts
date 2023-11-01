@@ -1,5 +1,3 @@
-import { IComment } from './comments';
-
 export interface INews {
     id: number;
     title: string;

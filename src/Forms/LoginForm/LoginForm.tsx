@@ -1,6 +1,5 @@
 import { Formik, Form } from 'formik';
 import { Input, FormButton, FormTittle } from '../FormComponents';
-import { Link } from 'react-router-dom';
 
 interface IUserCredentials {
     email: string;

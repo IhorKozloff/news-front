@@ -1,22 +1,17 @@
-import { CommentField } from "../Comments/CommentField"
-
-import { useAppSelector } from "../../hooks/storeHooks";
-import { useGetCommentsByNewsIdQuery } from "../../store/api/commentsApi";
-import { NewComment } from "../../types/comments";
-
-import { useAddNewCommentMutation } from '../../store/api/commentsApi'
-import { sortCommentsByISODate } from "../../utils/sortCommentsByISODate";
-import { INewReply } from "../../types/reply";
-import { useAddNewReplyMutation, useGetReplyesByParentIdQuery } from "../../store/api/replyesApi";
-import { CommentsList } from "../Comments/CommentsList";
+import { CommentField } from '../Comments/CommentField';
+import { useAppSelector } from '../../hooks/storeHooks';
+import { sortCommentsByISODate } from '../../utils/sortCommentsByISODate';
+import { INewReply } from '../../types/reply';
+import { useAddNewReplyMutation, useGetReplyesByParentIdQuery } from '../../store/api/replyesApi';
+import { CommentsList } from '../Comments/CommentsList';
 
 interface IProps {
     newsId: string;
     parentId: string;
 }
 export const Replyes = ({newsId, parentId}: IProps) => {
-    const {data, isLoading} = useGetReplyesByParentIdQuery({newsId, parentId});
-    const [sendReply, addingNewReplyResult] = useAddNewReplyMutation();
+    const {data} = useGetReplyesByParentIdQuery({newsId, parentId});
+    const [sendReply] = useAddNewReplyMutation();
     const token = useAppSelector(state => state.userAuthData.authData.token);
 
     const onReplySubmit = (text: string, imgData: string[] | undefined) => {
@@ -34,7 +29,7 @@ export const Replyes = ({newsId, parentId}: IProps) => {
             newReplyData: replyData,
             token: token!,
         });
-;
+        ;
     };
     
     return (

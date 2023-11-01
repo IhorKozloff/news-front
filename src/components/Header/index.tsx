@@ -49,7 +49,7 @@ export const Header = () => {
                     }
 
                     {user.isUserLogin === false && 
-                        <div className='w-full flex items-center justify-between'>
+                        <div className="w-full flex items-center justify-between">
                             <FaUserCircle/>
                             <button onClick={onLoginBtnClick} className="px-4 py-2 border-2 border-solid border-black rounded-xl">Sign In</button>
                         </div>

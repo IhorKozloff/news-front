@@ -5,7 +5,6 @@ export const uploadImgApi = createApi({
     reducerPath: 'uploadImgApi',
 
     baseQuery: fetchBaseQuery({ baseUrl }),
-    //tagTypes: ['CommentsList'],
 
     endpoints: (builder) => ({
 
@@ -18,7 +17,6 @@ export const uploadImgApi = createApi({
                     'Authorization': `Bearer ${token}`,
                 }
             }),
-            //invalidatesTags: ['CommentsList']
         }),
     }),
 });

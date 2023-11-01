@@ -8,7 +8,7 @@ interface IProps {
 export const NewsList = ({newsData}: IProps) => {
 
     return (
-        <ul className='flex justify-between flex-wrap'>
+        <ul className="flex justify-between flex-wrap">
             {newsData.map(({id, title, imgUrl}) => {
                 return (
                     <li key={id}>

@@ -17,5 +17,5 @@ export const ReactionBtn = ({reaction, onClick}: IProps) => {
         }}>
             <span><FaArrowDownLong/></span>
         </button>
-    )
-}
+    );
+};

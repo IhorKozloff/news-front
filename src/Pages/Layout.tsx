@@ -12,11 +12,11 @@ export const LayoutPage = () => {
 
     return (
         <>
-            <div className='w-full h-10 bg-layoutDark text-layoutExtraDark font-bold flex items-center pl-10'>
+            <div className="w-full h-10 bg-layoutDark text-layoutExtraDark font-bold flex items-center pl-10">
                 <Link to={'/'}>AROUND THE WORLD</Link>
             </div>
 
-            <section className='bg-layoutLight h-full w-full min-h-screen pt-8'>
+            <section className="bg-layoutLight h-full w-full min-h-screen pt-8">
                 <div className="container mb-8 mx-auto">
                     <Header/>
                 </div>
@@ -26,11 +26,11 @@ export const LayoutPage = () => {
                     </main>
                 </div>
 
-                <div className='container mx-auto mb-24'>
+                <div className="container mx-auto mb-24">
                     <SocialLinksBar />
                 </div>
 
-                <div className='container mx-auto'>
+                <div className="container mx-auto">
                     <Footer />
                 </div>
             </section>

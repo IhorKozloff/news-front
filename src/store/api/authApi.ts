@@ -1,12 +1,11 @@
 import { createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 import { baseUrl } from '../../constants/baseUrl';
-import { IUserDetails, UserLoginData, UserLogoutData, UserRegisterData } from '../../types/auth';
+import { IUserDetails, UserLoginData, UserRegisterData } from '../../types/auth';
 
 export const authApi = createApi({
     reducerPath: 'authApi',
 
     baseQuery: fetchBaseQuery({ baseUrl }),
-    // tagTypes: ['Like'],
 
     endpoints: (builder) => ({
         register: builder.mutation<IUserDetails, UserRegisterData>({
@@ -24,16 +23,6 @@ export const authApi = createApi({
                 body
             }),
         }),
-
-        // logout: builder.query<void, UserLogoutData>({
-        //     query: (userData) => ({
-        //         url: `/api/auth/logout/${userData.id}`,
-        //         method: 'GET',
-        //         headers: {
-        //             'Authorization': `Bearer ${userData.token}`
-        //         }
-        //     }),
-        // }),
     }),
 });
 

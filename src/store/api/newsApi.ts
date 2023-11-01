@@ -6,7 +6,6 @@ export const newsApi = createApi({
     reducerPath: 'newsApi',
 
     baseQuery: fetchBaseQuery({ baseUrl }),
-    // tagTypes: ['Like'],
 
     endpoints: (builder) => ({
         getNewsGeneralInfo: builder.query<INews[], void>({
@@ -15,12 +14,6 @@ export const newsApi = createApi({
         getNewsDetails: builder.query<INewsDetails, string>({
             query: (id) => `/api/news/${id}`
         }),
-        // getNewsbyId: builder.query<ICourseContentResponse, string | undefined>({
-        //     query: (id) => `news/${id}`,
-        //     providesTags: ['Like'],
-        //     transformResponse: (response: ICourseByIdResponse, meta, arg) => response.result,
-        // }),
-
     }),
 });
 

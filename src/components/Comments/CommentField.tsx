@@ -92,7 +92,7 @@ export const CommentField = ({ onSubmit }: IProps) => {
                 }
             </Formik>
 
-            {actionBarStatus === true && <div className='absolute left-10 bottom-0 flex gap-4'>
+            {actionBarStatus === true && <div className="absolute left-10 bottom-0 flex gap-4">
                 <ImagePicker addNewImgUrl={onAddNewImgUrl}/>
 
                 {uploadedImgUrls.length !== 0 && 
@@ -101,7 +101,7 @@ export const CommentField = ({ onSubmit }: IProps) => {
                         return (
                             <li key={item} className="w-16 h-16 relative">
 
-                                <img src={`${baseUrl}/${item}`} alt="users uploaded pic" className='w-full h-full object-cover'/>
+                                <img src={`${baseUrl}/${item}`} alt="users uploaded pic" className="w-full h-full object-cover"/>
                                 
                                 <div className="absolute right-0 -bottom-2">
                                     <IconContext.Provider value={{ className: 'w-5 h-5' }}>

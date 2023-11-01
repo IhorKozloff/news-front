@@ -10,7 +10,7 @@ export const NewsDetailsPage = () => {
     
     const [isCommentsOpen, setIsCommentsOpen] = useState(false);
 
-    const { data, isLoading} = useGetNewsDetailsQuery(newsId!);
+    const { data } = useGetNewsDetailsQuery(newsId!);
 
     const onLoadCommentsBtnClick = () => {
         if (isCommentsOpen) {
@@ -18,7 +18,7 @@ export const NewsDetailsPage = () => {
         } else {
             setIsCommentsOpen(true);
         } 
-    }
+    };
 
     return (
         <>

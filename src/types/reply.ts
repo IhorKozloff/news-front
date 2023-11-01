@@ -1,4 +1,4 @@
-import { IComment, NewComment } from "./comments";
+import { IComment, NewComment } from './comments';
 
 export interface IReply extends IComment {
     parent_id: string | null;
