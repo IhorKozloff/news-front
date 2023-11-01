@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.container {
+  width: 1280px;
+}
+
+.background-dark {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+}
+
+.modal-window {
+  background-color: rgba(47, 48, 58, 0.5);
+}
+
+.user-register-form-bg {
+  background-image: url('../src/images/registerFormWallpaper.jpg');
+  background-position: center top -10px;
+} 
+.user-login-form-bg {
+background-image: url('../src/images/loginFormWallpaper.jpg');
+background-position: center top -10px;
+}
+.auth-form-submit-btn {
+background: linear-gradient(91.63deg, #FFB931 0.35%, #EAA318 99.45%);
+font-family: 'Inter';
+font-style: normal;
+} 
+
+.replyes {
+  width: calc(100% - 40px);
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.custom-hidden {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  line-height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
